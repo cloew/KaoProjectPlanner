@@ -9,8 +9,8 @@ class Project(models.Model):
     
 class Iteration(models.Model):
     title = models.CharField(max_length=200)
-    start_date = models.DateTimeField('start date')
-    end_date = models.DateTimeField('end date')
+    start_date = models.DateField('start date')
+    end_date = models.DateField('end date')
     project = models.ForeignKey(Project)
     
     def __unicode__(self):
